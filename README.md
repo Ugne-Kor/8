@@ -14,6 +14,6 @@ data_pol <- arrange(data_pol, year, country, politics)
 
 ## Pašalina stebinius, kurių daugiau nei 50% reikšmės yra tuščios.
 ```{r trečias}
-data_pol <- data_pol[rowSums(is.na(data_pol))/ncol(data_pol) < 0.5,]
+data_pol <- data_pol[rowSums(is.na(data_pol))<(ncol(data_pol)/2),]
 ```
 
